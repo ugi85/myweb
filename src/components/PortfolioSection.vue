@@ -30,7 +30,7 @@ const handleCardClick = (project) => {
 </script>
 
 <template>
-  <section id="portofolio" class="py-20 md:py-28 relative">
+  <section id="portofolio" class="py-16 sm:py-20 md:py-28 relative overflow-hidden w-full max-w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-12 space-y-4">

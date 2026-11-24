@@ -20,7 +20,7 @@ const toggleFaq = (index) => {
 </script>
 
 <template>
-  <section id="alur-kerja" class="py-20 md:py-28 relative bg-dark-surface/30 border-t border-white/5">
+  <section id="alur-kerja" class="py-16 sm:py-20 md:py-28 relative bg-dark-surface/30 border-t border-white/5 overflow-hidden w-full max-w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
       <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">

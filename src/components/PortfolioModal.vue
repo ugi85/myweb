@@ -55,7 +55,7 @@ const getWaUrl = (title) => {
   >
     <div
       v-if="isOpen && project"
-      class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 overflow-y-auto"
+      class="fixed inset-0 z-50 flex items-center justify-center p-3 sm:p-6 overflow-y-auto w-full max-w-full"
     >
       <!-- Backdrop -->
       <div 

@@ -53,9 +53,11 @@ const directWaUrl = generateDirectWhatsAppLink('Konsultasi Kebutuhan Teknologi')
 </script>
 
 <template>
-  <section id="kontak" class="py-20 md:py-28 relative">
-    <!-- Ambient glow behind contact -->
-    <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-brand-500/10 rounded-full blur-[140px] pointer-events-none -z-10"></div>
+  <section id="kontak" class="py-16 sm:py-20 md:py-28 relative overflow-hidden w-full max-w-full">
+    <!-- Ambient glow behind contact (strictly contained) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+      <div class="absolute bottom-0 left-1/2 -translate-x-1/2 w-[340px] sm:w-[600px] h-[300px] bg-brand-500/10 rounded-full blur-[120px]"></div>
+    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->

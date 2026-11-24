@@ -84,35 +84,35 @@ const waDirectUrl = generateDirectWhatsAppLink('Konsultasi Awal Proyek')
 <template>
   <header 
     :class="[
-      'fixed top-0 left-0 right-0 z-50 transition-all duration-300',
+      'fixed top-0 left-0 right-0 z-50 transition-all duration-300 w-full max-w-full',
       isScrolled 
-        ? 'bg-dark-bg/90 backdrop-blur-md border-b border-white/10 shadow-xl shadow-black/40 py-3' 
-        : 'bg-transparent py-5'
+        ? 'bg-dark-bg/95 backdrop-blur-md border-b border-white/10 shadow-xl shadow-black/40 py-2.5 sm:py-3' 
+        : 'bg-dark-bg/85 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none border-b border-white/5 md:border-transparent py-2.5 sm:py-5'
     ]"
   >
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between">
-        <!-- Logo -->
+    <div class="w-full max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between gap-2">
+        <!-- Logo & Brand Name -->
         <a 
           href="#" 
           @click="scrollToSection($event, '#')"
-          class="flex items-center gap-3 group focus:outline-none"
+          class="flex items-center gap-2 sm:gap-3 group focus:outline-none min-w-0"
         >
-          <div class="relative w-12 h-12 rounded-xl bg-gradient-to-br from-brand-500/20 via-slate-900 to-accent-500/15 p-1 border border-brand-500/30 shadow-lg shadow-brand-500/10 group-hover:scale-105 group-hover:border-brand-400/60 group-hover:shadow-brand-500/25 transition-all duration-300 flex items-center justify-center">
+          <div class="relative w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-brand-500/20 via-slate-900 to-accent-500/15 p-1 border border-brand-500/30 shadow-lg shadow-brand-500/10 shrink-0 group-hover:scale-105 group-hover:border-brand-400/60 transition-all duration-300 flex items-center justify-center">
             <img
               :src="siteConfig.brand.logoIcon"
               :alt="siteConfig.brand.name"
               class="w-full h-full object-contain filter drop-shadow-[0_2px_6px_rgba(16,185,129,0.3)]"
             />
           </div>
-          <div class="flex flex-col">
+          <div class="flex flex-col min-w-0">
             <div class="flex items-center gap-1.5">
-              <span class="text-xl font-extrabold tracking-tight text-white group-hover:text-brand-300 transition-colors">
+              <span class="text-sm sm:text-xl font-extrabold tracking-tight text-white group-hover:text-brand-300 transition-colors truncate">
                 {{ siteConfig.brand.name }}
               </span>
-              <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse"></span>
+              <span class="inline-block w-1.5 h-1.5 rounded-full bg-brand-400 animate-pulse shrink-0"></span>
             </div>
-            <span class="text-[10px] uppercase font-mono tracking-wider text-brand-400 -mt-0.5">
+            <span class="text-[9px] sm:text-[10px] uppercase font-mono tracking-wider text-brand-400 -mt-0.5 truncate">
               Jasa Software & Teknologi
             </span>
           </div>
@@ -149,22 +149,23 @@ const waDirectUrl = generateDirectWhatsAppLink('Konsultasi Awal Proyek')
           </a>
         </div>
 
-        <!-- Mobile Menu Toggle Button -->
-        <div class="flex md:hidden items-center gap-2">
+        <!-- Mobile Menu Toggle & WhatsApp Direct Button (Always visible on mobile) -->
+        <div class="flex md:hidden items-center gap-1.5 shrink-0">
           <a
             :href="waDirectUrl"
             target="_blank"
             rel="noopener noreferrer"
-            class="p-2 text-brand-400 bg-brand-500/10 border border-brand-500/20 rounded-lg text-xs font-semibold flex items-center gap-1"
+            class="p-2 sm:p-2.5 text-brand-400 bg-brand-500/10 hover:bg-brand-500/20 border border-brand-500/20 rounded-xl text-xs font-semibold flex items-center justify-center shrink-0 transition-colors"
+            aria-label="Konsultasi WhatsApp"
           >
             <MessageSquare class="w-4 h-4" />
           </a>
           <button
             @click="mobileMenuOpen = !mobileMenuOpen"
-            class="p-2 rounded-lg text-slate-300 hover:text-white hover:bg-slate-800 border border-white/10 focus:outline-none"
+            class="p-2 sm:p-2.5 rounded-xl text-slate-300 hover:text-white bg-slate-900/80 hover:bg-slate-800 border border-white/10 focus:outline-none shrink-0 transition-colors"
             aria-label="Toggle menu"
           >
-            <component :is="mobileMenuOpen ? X : Menu" class="w-6 h-6" />
+            <component :is="mobileMenuOpen ? X : Menu" class="w-5 h-5" />
           </button>
         </div>
       </div>

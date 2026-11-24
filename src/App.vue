@@ -69,12 +69,12 @@ const floatingWaUrl = generateDirectWhatsAppLink('Halo Bang Ugi, saya ingin disk
 </script>
 
 <template>
-  <div class="min-h-screen bg-dark-bg text-slate-100 flex flex-col font-sans selection:bg-brand-500 selection:text-white relative">
+  <div class="min-h-screen bg-dark-bg text-slate-100 flex flex-col font-sans selection:bg-brand-500 selection:text-white relative w-full max-w-full overflow-x-hidden">
     <!-- Sticky Responsive Navbar -->
     <Navbar />
 
     <!-- Main Content Container -->
-    <main class="flex-grow">
+    <main class="flex-grow w-full max-w-full overflow-x-hidden">
       <!-- 1. Hero Section -->
       <HeroSection />
 

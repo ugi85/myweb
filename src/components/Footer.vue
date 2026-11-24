@@ -13,7 +13,7 @@ const currentYear = new Date().getFullYear()
 </script>
 
 <template>
-  <footer class="bg-dark-bg border-t border-white/10 pt-16 pb-12 relative overflow-hidden">
+  <footer class="bg-dark-bg border-t border-white/10 pt-16 pb-12 relative overflow-hidden w-full max-w-full">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-white/5">
         <!-- Brand Info -->

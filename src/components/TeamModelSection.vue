@@ -26,10 +26,12 @@ const principalWaUrl = generateDirectWhatsAppLink('Halo Fakhri, saya ingin konsu
 </script>
 
 <template>
-  <section id="tim" class="py-20 md:py-28 relative bg-dark-surface/40 border-y border-white/5">
-    <!-- Ambient glow behind section -->
-    <div class="absolute top-1/3 right-10 w-96 h-96 bg-brand-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
-    <div class="absolute bottom-10 left-10 w-96 h-96 bg-accent-500/10 rounded-full blur-[120px] pointer-events-none -z-10"></div>
+  <section id="tim" class="py-16 sm:py-20 md:py-28 relative bg-dark-surface/40 border-y border-white/5 overflow-hidden w-full max-w-full">
+    <!-- Ambient glow behind section (strictly contained) -->
+    <div class="absolute inset-0 overflow-hidden pointer-events-none -z-10">
+      <div class="absolute top-1/3 -right-20 w-72 sm:w-96 h-72 sm:h-96 bg-brand-500/10 rounded-full blur-[120px]"></div>
+      <div class="absolute bottom-10 -left-20 w-72 sm:w-96 h-72 sm:h-96 bg-accent-500/10 rounded-full blur-[120px]"></div>
+    </div>
 
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <!-- Section Header -->
